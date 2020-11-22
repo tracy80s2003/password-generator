@@ -1,42 +1,28 @@
 // Assignment Code
-var lowerCaseChar = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
-var upperCaseChar = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+// declaring all variables for password characters
 
-var numericNumber = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+var charCount = ["lowerCaseChar", "upperCaseChar", "numericNumber", "specialChar",]
+  lowerCaseChar = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+  upperCaseChar = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+  numericNumber = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  specialChar = ['#', '$', '%', '&', '(', ')', '*', '+', ',', '-', '.', '/', ':', '<', '=', '>', '?', '@', '[', '~', '|', '{', '}', ' ', '"']
+  
+  // var strLength=str.length;
 
-var specialChar = ['#', '$', '%', '&', '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '['];
+  var charCount = parseInt(prompt('Please enter a password between 8 and 128 characters long.'))
 
-var charCount = parseInt(prompt('Enter a password between 8 and 128 characters'))
-
-if (charCount >= 8 && charCount <= 128) {
-  var finalChars = []
-
-  var includeSpecial = confirm('Password should include special characters?')
-  var includeNumbers = confirm('Password should include numbers?')
-
-  if (includeNumbers) {
-
+  if (charCount >= 8 && charCount <= 128) { 
+    var includeLowerUpperCaseChar = parseInt(prompt('Does password include uppercase letters?'))
+    var includeLowerCaseChar = parseInt(prompt('Does password include lowercase letters?'))
+    var includeSpecialChar = parseInt(prompt('Does password include special characters?'))
+    var includeNumericNumbers = parseInt(prompt('Does password include numbers?'))
   }
-
-  if (includeNumbers) {
-
-  }
-
-  console.log(finalChars)
-
-}
-
-var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+//generateBtn.addEventListener("click", writePassword);
+document.getElementById("click").addEventListener('button', myFunction);
+
+function myFunction() {
+  document.getElementById("click").innerHTML = parseInt(prompt);
+}
